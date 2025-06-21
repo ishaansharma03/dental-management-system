@@ -1,60 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🦷 Dental Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-featured web-based Dental Practice Management System built with Laravel, designed to streamline clinic operations including patient scheduling, treatment planning, insurance tracking, and X-ray file management. Now enhanced with an integrated AI Chatbot powered by OpenAI's GPT model.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 🧑‍⚕️ **Patient Management**  
+  Add, view, edit, and manage patient records including contact details and medical history.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 📅 **Appointment Scheduling**  
+  Book appointments with date/time, and view them in a clean list view.
 
-## Learning Laravel
+- 💉 **Treatment Planning**  
+  Record treatment details, edit procedures, and associate them with patient profiles.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 🏥 **Insurance Tracking**  
+  Store and view insurance details like provider name, policy number, and validity.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- 🖼️ **X-ray Upload**  
+  Upload and store patient X-ray files securely.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- 🔐 **Authentication**  
+  Secure login & registration for clinic staff using Laravel Breeze.
 
-## Laravel Sponsors
+- 🤖 **AI Chatbot Integration**  
+  An AI-powered Chatbot using OpenAI's GPT-3.5 model is integrated directly into the dashboard. It allows users to ask dental-related queries and receive real-time assistance from the embedded assistant.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🧠 Technologies Used
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+- **Backend:** Laravel 10+
+- **Frontend:** Blade Templates, Bootstrap 5
+- **Database:** MySQL
+- **File Uploads:** Laravel Storage System
+- **AI/LLM Integration:** OpenAI GPT (via Guzzle & REST API)
+- **HTTP Requests:** Laravel's `Http` client
+- **Version Control:** Git & GitHub
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🧪 Screenshots
 
-## Code of Conduct
+### 🧭 Dental Dashboard  
+![Dental Dashboard](public/screenshots/Dental%20Dashboard.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 📅 Appointments Table  
+![Appointments Table](public/screenshots/Appointments%20Table.png)
 
-## Security Vulnerabilities
+### ➕ New Appointment Form  
+![New Appointments](public/screenshots/New%20Appointments.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 👤 Patients Table  
+![Patients Table](public/screenshots/Patients%20Table.png)
+
+### 💉 New Treatment Form  
+![New Treatment](public/screenshots/New%20Treatment.png)
+
+### 📋 Treatments Table  
+![Treatments Table](public/screenshots/Treatments%20Table.png)
+
+---
+
+## ⚙️ How to Run Locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/ishaansharma03/dental-management-system.git
+
+# 2. Move into the project directory
+cd dental-management-system
+
+# 3. Install PHP & JS dependencies
+composer install
+npm install && npm run dev
+
+# 4. Set up environment variables
+cp .env.example .env
+
+# 5. Generate app key
+php artisan key:generate
+
+# 6. Configure your database in `.env`
+
+# 7. Run migrations
+php artisan migrate
+
+# 8. Serve the application
+php artisan serve
+
 
 ## License
 
