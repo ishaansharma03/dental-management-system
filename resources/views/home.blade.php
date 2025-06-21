@@ -44,4 +44,46 @@
         + Schedule Appointment
     </a>
 </div>
+
+{{-- 🧠 Floating AI Chatbot Button --}}
+<button id="chatbotToggle" class="btn btn-dark rounded-circle shadow" style="position: fixed; bottom: 20px; right: 20px; z-index: 1050;">
+    💬
+</button>
+
+{{-- 🧠 Floating AI Chat Window --}}
+<div id="chatbotWidget" class="card shadow-lg" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 320px; z-index: 1050;">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <span>Dental AI Assistant</span>
+        <button type="button" id="chatbotClose" class="btn btn-sm btn-light">×</button>
+    </div>
+    <div class="card-body">
+        @if (session('bot_reply'))
+            <div class="alert alert-info p-2"><strong>AI:</strong> {{ session('bot_reply') }}</div>
+        @endif
+
+        <form method="POST" action="{{ route('chatbot.send') }}">
+            @csrf
+            <div class="mb-2">
+                <textarea name="message" class="form-control" placeholder="Ask something..." required>{{ old('message') }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-sm btn-success w-100">Send</button>
+        </form>
+    </div>
+</div>
+
+{{-- 🔄 Toggle Script --}}
+<script>
+    const toggle = document.getElementById('chatbotToggle');
+    const widget = document.getElementById('chatbotWidget');
+    const close = document.getElementById('chatbotClose');
+
+    toggle.addEventListener('click', () => {
+        widget.style.display = widget.style.display === 'none' ? 'block' : 'none';
+    });
+
+    close.addEventListener('click', () => {
+        widget.style.display = 'none';
+    });
+</script>
 @endsection
+
